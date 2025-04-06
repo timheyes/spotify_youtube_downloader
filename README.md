@@ -1,4 +1,4 @@
-# Spotiy / YouTube Audio Downloader
+# Spotify / YouTube Audio Downloader
 
 Downloads audio from YouTube links found in Spotify playlist/show descriptions or directly from YouTube playlists. It uses `yt-dlp` for downloading and keeps track of downloaded items to avoid duplicates on subsequent runs.
 
@@ -15,7 +15,7 @@ Downloads audio from YouTube links found in Spotify playlist/show descriptions o
 
 ## Prerequisites
 
-* **Python:** Version 3.8 or newer.
+* **Python:** Version 3.9 or newer.
 * **Poetry:** For managing Python dependencies ([Installation Guide](https://python-poetry.org/docs/#installation)).
 * **yt-dlp:** The core downloading tool. Must be installed and accessible in your system's PATH ([Installation Guide](https://github.com/yt-dlp/yt-dlp#installation)).
 * **Spotify API Credentials (Required for Spotify URLs):**
