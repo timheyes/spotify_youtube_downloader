@@ -24,7 +24,7 @@ yt-dlp = "^2025.3.31"
 # For now, assuming the script is `downloader.py` in the root:
 # downloader = "downloader:main" # If you wrap your main logic in a main() function in downloader.py
 # OR, if you refactor into src/spotify_yt_downloader/main.py with a run() function:
-spotify-downloader = "spotify_youtube_downloader.main:run"
+spotify_youtube_downloader = "spotify_youtube_downloader.main:run"
 
 
 [build-system]
