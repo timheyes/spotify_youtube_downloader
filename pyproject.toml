@@ -16,14 +16,17 @@ python = "^3.9"  # Requires Python 3.9 or newer
 spotipy = "^2.23.0" # Use the latest stable version of spotipy
 python-dotenv = "^1.0.0" # To load environment variables from .env file (optional but good practice)
 yt-dlp = "^2025.3.31"
+tomli = "^2.0.1"      # For reading config.toml (use tomllib if Python >= 3.11)
+tenacity = "^8.2.3"   # For retry logic
+requests = "^2.31.0"  # For specific network exceptions
 
 [tool.poetry.scripts]
 # Defines a command-line entry point if you install the package
-# Assumes your main script logic is in `spotify_yt_downloader/main.py` inside a `run()` function.
+# Assumes your main script logic is in `spotify_youtube_downloader/main.py` inside a `run()` function.
 # Adjust the path if your script is named differently or not in a src layout yet.
 # For now, assuming the script is `downloader.py` in the root:
 # downloader = "downloader:main" # If you wrap your main logic in a main() function in downloader.py
-# OR, if you refactor into src/spotify_yt_downloader/main.py with a run() function:
+# OR, if you refactor into src/spotify_youtube_downloader/main.py with a run() function:
 spotify_youtube_downloader = "spotify_youtube_downloader.main:run"
 
 
