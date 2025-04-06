@@ -1,0 +1,33 @@
+# pyproject.toml
+
+[tool.poetry]
+name = "spotify_youtube_downloader"
+version = "0.1.0"
+description = "Downloads audio from YouTube links found in Spotify playlist/show descriptions or directly from YouTube playlists, with download tracking."
+authors = ["Timothy Heyes"]
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/your-username/spotify-youtube-downloader"
+homepage = "https://github.com/your-username/spotify-youtube-downloader"
+keywords = ["spotify", "youtube", "downloader", "audio", "podcast", "yt-dlp"]
+
+[tool.poetry.dependencies]
+python = "^3.9"  # Requires Python 3.9 or newer
+spotipy = "^2.23.0" # Use the latest stable version of spotipy
+python-dotenv = "^1.0.0" # To load environment variables from .env file (optional but good practice)
+yt-dlp = "^2025.3.31"
+
+[tool.poetry.scripts]
+# Defines a command-line entry point if you install the package
+# Assumes your main script logic is in `spotify_yt_downloader/main.py` inside a `run()` function.
+# Adjust the path if your script is named differently or not in a src layout yet.
+# For now, assuming the script is `downloader.py` in the root:
+# downloader = "downloader:main" # If you wrap your main logic in a main() function in downloader.py
+# OR, if you refactor into src/spotify_yt_downloader/main.py with a run() function:
+spotify-downloader = "spotify_youtube_downloader.main:run"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+requires-python = ">=3.9"
+build-backend = "poetry.core.masonry.api"
