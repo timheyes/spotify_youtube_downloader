@@ -28,7 +28,7 @@ Downloads audio from YouTube links found in Spotify playlist/show descriptions o
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-username/spotify-yt-downloader.git](https://github.com/timheyes/spotify_youtube_downloader.git) # <-- CHANGE THIS
+    git clone [https://github.com/your-username/spotify_youtube_downloader.git](https://github.com/timheyes/spotify_youtube_downloader.git)
     cd spotify_youtube_downloader
     ```
 
@@ -59,12 +59,12 @@ Downloads audio from YouTube links found in Spotify playlist/show descriptions o
 
     * **If using `poetry shell`:**
         ```bash
-        python src/spotify_yt_downloader/main.py "URL" -o "output_folder" -f "audio/video" --yt-dlp-path "path/to/yt-dlp"
+        python src/spotify_youtube_downloader/main.py "URL" -o "output_folder" -f "audio/video" --yt-dlp-path "path/to/yt-dlp"
         ```
 
     * **If *not* using `poetry shell`:**
         ```bash
-        poetry run python src/spotify_yt_downloader/main.py "URL" -o "output_folder" -f "audio/video" --yt-dlp-path "path/to/yt-dlp"
+        poetry run python src/spotify_youtube_downloader/main.py "URL" -o "output_folder" -f "audio/video" --yt-dlp-path "path/to/yt-dlp"
         ```
 
 3.  **Arguments:**
