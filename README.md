@@ -28,8 +28,8 @@ Downloads audio from YouTube links found in Spotify playlist/show descriptions o
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-username/spotify-yt-downloader.git](https://github.com/your-username/spotify-yt-downloader.git) # <-- CHANGE THIS
-    cd spotify-yt-downloader
+    git clone [https://github.com/your-username/spotify-yt-downloader.git](https://github.com/timheyes/spotify_youtube_downloader.git) # <-- CHANGE THIS
+    cd spotify_youtube_downloader
     ```
 
 2.  **Install dependencies using Poetry:**
@@ -59,30 +59,24 @@ Downloads audio from YouTube links found in Spotify playlist/show descriptions o
 
     * **If using `poetry shell`:**
         ```bash
-        # Using the script entry point defined in pyproject.toml (requires code refactoring)
-        # spotify-downloader "URL"
-
-        # OR running the script directly (adjust path if needed)
-        python src/spotify_yt_downloader/main.py
-        # or if still in root: python downloader.py
+        python src/spotify_yt_downloader/main.py "URL" -o "output_folder" -f "audio/video" --yt-dlp-path "path/to/yt-dlp"
         ```
 
     * **If *not* using `poetry shell`:**
         ```bash
-        # Using the script entry point
-        # poetry run spotify-downloader "URL"
-
-        # OR running the script directly
-        poetry run python src/spotify_yt_downloader/main.py
-        # or if still in root: poetry run python downloader.py
+        poetry run python src/spotify_yt_downloader/main.py "URL" -o "output_folder" -f "audio/video" --yt-dlp-path "path/to/yt-dlp"
         ```
 
-3.  **Enter URL:** When prompted, paste the full URL of the Spotify Playlist, Spotify Show, or YouTube Playlist you want to process.
+3.  **Arguments:**
+    * `URL`: The URL of the Spotify Playlist/Show or YouTube Playlist.
+    * `-o`, `--output`: Path to the directory where downloads and log file will be saved. Defaults to current directory.
+    * `-f`, `--format`: Download format: 'audio' (mp3) or 'video' (best mp4). Defaults to 'audio'.
+    * `--yt-dlp-path`: Path to the yt-dlp executable if not in system PATH. Defaults to "yt-dlp".
 
 4.  **Output:**
     * The script will print progress messages to the console.
-    * Downloaded audio files (defaulting to `.mp3`) will be saved in the directory where you run the script.
-    * A `downloaded_media.log` file will be created/updated in the same directory, tracking successful downloads.
+    * Downloaded files (defaulting to `.mp3` for audio and `.mp4` for video) will be saved in the specified output folder or the current directory if no output folder is specified.
+    * A `downloaded_media.log` file will be created/updated in the same directory where you run the script, tracking successful downloads.
 
 ## License
 
